@@ -1,14 +1,8 @@
 ---
-build:
-  image: golang
-  commands:
-    - go get
-    - go build
-    - go test
-
-publish:
-  docker:
-    username: octocat
-    password: password
-    email: octocat@github.com
-    repo: octocat/hello-world
+pipline:
+    test:
+        image: golang
+        commands:
+            - go get
+            - go build
+            - go test
